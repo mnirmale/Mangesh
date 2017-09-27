@@ -1,0 +1,317 @@
+<!-- === BEGIN HEADER === -->
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <!-- Title -->
+    <title>Mangesh Nirmale - DMS - Authorisation Group</title>
+    <!-- Meta -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Mangesh Nirmale Study on SAP DMS Doument management system generic object services">
+    <meta name="author" content="Mangesh Nirmale">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <!-- Favicon -->
+    <link href="favicon.html" rel="shortcut icon">
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
+    <!-- Google Fonts-->
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="pre_header" class="visible-lg"></div>
+    <div id="header" class="container">
+        <div class="row">
+<!-- Logo -->
+            <div class="logo">
+                <a href="index.html" title="">
+                    <img src="assets/img/mangesh1.png" alt="Logo" />
+                </a>
+            </div>
+<!-- End Logo -->
+<!-- Top Menu -->
+            <div class="col-md-12 margin-top-30">
+                <div id="hornav" class="pull-right visible-lg">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><span>DMS</span>
+                            <ul>
+                                <li><a href="dms_dms.html">DMS</a></li>
+                                <li><a href="dms_gos.html">GOS</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>               </div>
+                </div>
+                <div class="clear"></div>
+<!-- End Top Menu -->
+            </div>
+        </div>
+<!-- === END HEADER === -->
+        <div id="content" class="container">
+<!-- === BEGIN CONTENT === -->    
+	<div class="row margin-vert-30">
+<!-- Begin Sidebar Menu -->
+            <div class="col-md-3">
+                <ul class="list-group sidebar-nav" id="sidebar-nav">
+		<li class="list-group-item"><a href="index.html">Home</a></li>
+		<li class="list-group-item list-toggle">
+                        		<a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-dms">DMS</a>
+                        			<ul id="collapse-dms" class="collapse">
+                            			<li><a href="dms_dms.html"><i class="fa fa-file"></i>DMS</a></li>
+                            			<li><a href="dms_gos.html"><i class="fa fa-file-text"></i>GOS</a></li>
+                       			 </ul>
+                    	</li>
+		<li class="list-group-item list-toggle">
+                        		<a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-ps">Project System</a>
+                        			<ul id="collapse-ps" class="collapse">
+                            			<li><a href="#"><i class="fa fa-sort-alpha-asc"></i>PS</a></li>
+                            			<li><a href="#"><i class="fa fa-magic"></i>PS</a></li>
+                       			 </ul>
+                    	</li>
+                </ul>
+            </div>
+<!-- End Sidebar Menu -->      
+  
+	<div class="col-md-9">
+	
+<!--********************************************************************************-->
+	<div class="blog-post">
+		<div class="blog-item-header"><h2>Configuration - Use of Authorisation Group</h2></div>
+		<div class="blog-post-details"><div class="blog-post-details-item blog-post-details-item-left user-icon"><i class="fa fa-user"></i>Mangesh Nirmale</div></div>
+		<div class="blog-item">
+			<div class="clearfix"></div>
+			<div class="blog-post-body row margin-top-15">	
+
+
+				<div class="col-md-12">
+					<p>With help of authorisation group while creating DIR in DMS we can ristrict user for change/display for each document type. It is <strong>controlled through role</strong> assignment. <br><strong>Some of the Authorisation Object are listed below.</strong></p>
+
+						<div class="col-md-1"></div>
+						<div class="col-md-11">
+							<table border="1">
+								<tr><th>Sr. No.</th><th>Authorisation Object</th><th>Description</th></tr>
+								<tr><td>1 </td><td>C_DRAW_BGR</td><td>Authorization for authorization groups</td></tr>
+								<tr><td>2 </td><td>C_DRAW_DOK</td><td>Authorization for document access</td></tr>	
+								<tr><td>3 </td><td>C_DRAW_STA</td><td>Authorization for document status</td></tr>
+								<tr><td>4 </td><td>C_DRAW_TCD</td><td>Authorization for document activities</td></tr>	
+								<tr><td>5 </td><td>C_DRAW_TCS</td><td>Status-Dependent Authorizations for Documents</td></tr>		
+								<tr><td>5 </td><td>C_DRAW_MUP</td><td>Authorization for Markups</td></tr>		
+							</table>
+						</div>
+					<p>&nbsp;</p>
+					<p>Following steps are shown for one example. In DC10, for Document type DWG you have set, Authorization Group as Required Field (Double click on DWG document type in DC10, you can see your configuration for details of your configuration)</p>
+					<p>For Example....There are two users User A & User B and they both have access to document type XYZ. but they dont want to access each other document. So in this case we create two authorisation group as "AAA" for User A & "BBB" for user B. when they use their Authorisation group while creating DIR then they can access only those DIR which authoristion group matches with their respective role. </p>
+					<div class="col-md-1"></div><div class="col-md-2"><strong>Step 1</strong></div>
+					<div class="col-md-9">
+						<strong>T-Code : PFCG</strong>
+						<br>Create a new role and goto Authorisation tab. Click change authorisation data
+					</div>
+
+					<p>&nbsp;</p>
+					<div class="col-md-1"></div><div class="col-md-2"><strong>Step 2</strong></div>
+					<div class="col-md-9">
+						Add object C_DRAW_BGR & C_DRAW_DOK.
+					</div>	
+
+					<p>&nbsp;</p>
+					<div class="col-md-1"></div><div class="col-md-2"><strong>Step 3</strong></div>
+					<div class="col-md-9">
+						Under Document management enter the Authorization code of your choice, Document type, allowed activities
+						<br>The user must remember this authorization code, as there is no F4 help for authorization group field in CV01N
+					</div>				
+
+					<p>&nbsp;</p>
+					<div class="col-md-1"></div><div class="col-md-2"><strong>Step 4</strong></div>
+					<div class="col-md-9">
+						Click on generate profile and save.
+						<br>Assign the newly created role to user
+					</div>	
+
+
+
+
+				</div>	
+			</div>	
+		</div>
+	</div>
+<!--********************************************************************************-->
+<!--********************************************************************************-->
+<!--********************************************************************************-->
+ 	</div>
+
+
+<!--         <div class="margin-bottom-30"><hr></div> -->
+            
+        </div>
+    </div>
+</div>
+<!-- === END CONTENT === -->
+<!-- === BEGIN FOOTER === -->
+<div id="base">
+    <div class="container padding-vert-30">
+        <div class="row">
+<!-- Thumbs Gallery -->
+            <div class="col-md-3 margin-bottom-20">
+                <h3 class="margin-bottom-10">Portfolio Highlights</h3>
+                <div class="thumbs-gallery">
+                    
+                    <a class="thumbBox" rel="lightbox-thumbs" href="assets/img/thumbsgallery/image1.jpg">
+                        <img src="assets/img/thumbsgallery/thumbs/image1.jpg" alt="image1.jpg">
+                    <i></i></a>
+                    
+                    
+                    <a class="thumbBox" rel="lightbox-thumbs" href="assets/img/thumbsgallery/image2.jpg">
+                        <img src="assets/img/thumbsgallery/thumbs/image2.jpg" alt="image2.jpg">
+                    <i></i></a>
+                    
+                    
+                    <a class="thumbBox" rel="lightbox-thumbs" href="assets/img/thumbsgallery/image3.jpg">
+                        <img src="assets/img/thumbsgallery/thumbs/image3.jpg" alt="image3.jpg">
+                    <i></i></a>
+                    
+                    
+                    <a class="thumbBox" rel="lightbox-thumbs" href="assets/img/thumbsgallery/image4.jpg">
+                        <img src="assets/img/thumbsgallery/thumbs/image4.jpg" alt="image4.jpg">
+                    <i></i></a>
+                    
+                    
+                    <a class="thumbBox" rel="lightbox-thumbs" href="assets/img/thumbsgallery/image6.jpg">
+                        <img src="assets/img/thumbsgallery/thumbs/image6.jpg" alt="image6.jpg">
+                    <i></i></a>
+                    
+                    
+                    <a class="thumbBox" rel="lightbox-thumbs" href="assets/img/thumbsgallery/image7.jpg">
+                        <img src="assets/img/thumbsgallery/thumbs/image7.jpg" alt="image7.jpg">
+                    <i></i></a>
+                    
+                    
+                    <a class="thumbBox" rel="lightbox-thumbs" href="assets/img/thumbsgallery/image8.jpg">
+                        <img src="assets/img/thumbsgallery/thumbs/image8.jpg" alt="image8.jpg">
+                    <i></i></a>
+                    
+                    
+                    <a class="thumbBox" rel="lightbox-thumbs" href="assets/img/thumbsgallery/image9.jpg">
+                        <img src="assets/img/thumbsgallery/thumbs/image9.jpg" alt="image9.jpg">
+                    <i></i></a>
+                    
+                    
+                    <a class="thumbBox" rel="lightbox-thumbs" href="assets/img/thumbsgallery/image92.jpg">
+                        <img src="assets/img/thumbsgallery/thumbs/image92.jpg" alt="image92.jpg">
+                    <i></i></a>
+                    
+                    
+                    <a class="thumbBox" rel="lightbox-thumbs" href="assets/img/thumbsgallery/image94.jpg">
+                        <img src="assets/img/thumbsgallery/thumbs/image94.jpg" alt="image94.jpg">
+                    <i></i></a>
+                    
+                    
+                    <a class="thumbBox" rel="lightbox-thumbs" href="assets/img/thumbsgallery/image95.jpg">
+                        <img src="assets/img/thumbsgallery/thumbs/image95.jpg" alt="image95.jpg">
+                    <i></i></a>
+                    
+                    <a class="thumbBox" rel="lightbox-thumbs" href="assets/img/thumbsgallery/image96.jpg">
+                        <img src="assets/img/thumbsgallery/thumbs/image96.jpg" alt="image96.jpg">
+                    <i></i></a>
+                    
+                    </div>          <div class="clearfix"></div>
+                </div>
+<!-- End Thumbs Gallery -->
+<!-- Contact Details -->
+                <div class="col-md-3 margin-bottom-20">
+                    <h3 class="margin-bottom-10">Contact Details</h3>
+                    <p>Powai,<br />
+                    Mumbai,<br />
+                    Maharashtra,<br />
+                    India</p>
+                    <p>Email: <a href="mailto:mnirmale@gmail.com">mnirmale@gmail.com</a><br />
+                    Website: <a href="#">www.website.com</a></p>
+                </div>
+<!-- End Contact Details -->
+<!-- Sample Menu -->
+                <div class="col-md-3 margin-bottom-20" >
+                    <h3 class="margin-bottom-10">Sample Menu</h3>
+                    <ul class="menu">
+                        <li>
+                            <a class="fa-tasks" href="#" >Sample</a>
+                        </li>
+                        <li>
+                            <a class="fa-users" href="#" >Sample</a>
+                        </li>
+                        <li>
+                            <a class="fa-signal" href="#" >Sample</a>
+                        </li>
+                        <li>
+                            <a class="fa-coffee" href="#">Sample</a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                    
+                </div>
+<!-- End Sample Menu -->
+<!-- Disclaimer -->
+                <div class="col-md-3 margin-bottom-20">
+                    <h3 class="margin-bottom-10">Disclaimer</h3>
+                    <p>All images on this website are taken from google image search. Images hold copyright of repective websites.</p>
+                    <div class="clearfix"></div>
+                </div>
+<!-- End Disclaimer -->
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+<!-- Footer Menu -->
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div id="copyright" class="col-md-4">
+                    <p>(c) 2017 Mangesh</p>
+                </div>
+                <div id="footermenu" class="col-md-8">
+                    <ul class="list-unstyled list-inline pull-right">
+                        <li>
+                            <a href="#" target="_blank" >Sample Link</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" >Sample Link</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" >Sample Link</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" >Sample Link</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Footer Menu -->
+</div>
+</div>
+<!-- JS -->
+<script type="text/javascript" src="assets/js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/js/scripts.js"></script>
+<!-- Isotope - Portfolio Sorting -->
+<script type="text/javascript" src="assets/js/jquery.isotope.js" type="text/javascript"></script>
+<!-- Mobile Menu - Slicknav -->
+<script type="text/javascript" src="assets/js/jquery.slicknav.js" type="text/javascript"></script>
+<!-- Animate on Scroll-->
+<script type="text/javascript" src="assets/js/jquery.visible.js" charset="utf-8"></script>
+<!-- Slimbox2-->
+<script type="text/javascript" src="assets/js/slimbox2.js" charset="utf-8"></script>
+<!-- Modernizr -->
+<script src="assets/js/modernizr.custom.js" type="text/javascript"></script>
+<!-- End JS -->
+</body>
+</html>
+<!-- === END FOOTER === -->
